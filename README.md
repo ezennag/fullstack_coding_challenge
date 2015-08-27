@@ -1,9 +1,11 @@
 Tinder Full Stack Coding Challenge
 ===================================
 
+### Recreate the Tinder card stack in html/js/css.
+
 <img src="http://i.imgur.com/nh8oB6C.gif" />
 
-Create the Tinder card stack in html/js/css. At a minimum, this must:
+At a minimum, this must:
 
 * Recognize swipe left and swipe right gestures
 * Render properly on an iPhone 6
@@ -18,6 +20,10 @@ Bonus points for:
 * Bringing up the It's a match! screen on right swipe
 * Adding cool features
 
-We will be evaluating your submission based on how closely it matches the native experience, as well as the structure of the code.
+We will be evaluating your submission on both the efficiency and readability of your code and the degree to which your product matches the native experience.
 
-Please submit your solution as a pull request to this repository, and include in it a link to your working example.
+Please submit your solution as a pull request to this repository or email a zip directly to your recruiter, and include in it:
+
+* a link to your working example
+* how long this took you
+* what you would add/change if you had more time
