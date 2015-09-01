@@ -1,9 +1,10 @@
 {
-  "name": "tinderApp",
-  "version": "0.0.0",
+  "name": "fstinder",
+  "version": "0.0.1",
   "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
