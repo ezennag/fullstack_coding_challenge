@@ -1,43 +1,49 @@
 var app = angular.module("app", ['gajus.swing']);
+app.factory('People', ['$http', function($http){
+          return $http.get('/users/people');
+        }])
+app.controller('card-stack-playground', ['$scope', 'People', function ($scope, People) {
+        People.success(function(data){
+            $scope.cards = data;
+          }).error(function(data, status){
+            console.log(data, status);
+            $scope.cards = [];
+        });
 
-app.controller('card-stack-playground', function ($scope) {
-        $scope.cards = [
-            {name: 'clubs', imgUrl: 'http://assets.vg247.com/current//2015/02/kanye-west.jpg'},
-            {name: 'diamonds', imgUrl: 'http://assets.rollingstone.com/assets/2013/article/how-kanye-west-came-to-harvard-20131119/13521/_original/1035x672-111913-kanye-west-1800-1384897712.jpg'},
-            {name: 'hearts', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtMWsK6DBprHLVk899jRzIxtqa3qRLR9AiQti9c3WHqRFsZqb5'},
-            {name: 'spades', imgUrl: 'http://cdn.urbanislandz.com/wp-content/uploads/2013/05/Kanye-West.jpeg'}
-        ];
+        $scope.controlClick = function(clickType){
+            contact = getContact();
+            contact.classList.add(clickType);
+            $scope.removeCard(contact);    
 
-        $scope.throwout = function (eventName, eventObject) {
-            eventObject.target.classList.add('removed-card');
         };
 
-        $scope.throwoutleft = function (eventName, eventObject) {
-            console.log('throwoutleft', eventObject); 
+        $scope.throwout = function (eventName, eventObject) {
+            contact = getContact();
+            $scope.removeCard(contact);
         };
 
         $scope.throwoutright = function (eventName, eventObject) {
+            //add logic for "It's a Match"
             console.log('throwoutright', eventObject);
         };
 
-        $scope.throwin = function (eventName, eventObject) {
-            console.log('throwin', eventObject);
-        };
-
+        //TODO: Add logic to handle LIKE and NOPE
         $scope.dragstart = function (eventName, eventObject) {
-            console.log('dragstart', eventObject);
         };
 
         $scope.dragmove = function (eventName, eventObject) {
-            console.log('dragmove', eventObject);
         };
 
         $scope.dragend = function (eventName, eventObject) {
-            console.log('dragend', eventObject);
         };
-        $scope.remove = function (index) {
-            console.log('removing')
-            $scope.cards.splice(index, 1);
-            console.log($scope.cards);
+        $scope.removeCard = function (contact) {
+            contact.classList.add('removed-card');
+            setTimeout(function(){contact.classList.remove('contact');},500);
         }
-    });
+        function getContact(){
+            contactList = document.getElementsByClassName('contact');
+            index = contactList.length-1;
+            contact = contactList[index];
+            return contact;
+        }
+    }]);

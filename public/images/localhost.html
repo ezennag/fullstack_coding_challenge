@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://localhost:8080/stylesheets/style.css">
+
+    <script src="./localhost_files/angular.js"></script>
+    <script src="./localhost_files/angular-swing.js"></script>
+    <script src="./localhost_files/app.js"></script>
+<style type="text/css"></style></head>
+<body ng-app="app" class="ng-scope"><div id="StayFocusd-infobar" style="display: none; top: 8px;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+    <div id="container" ng-controller="card-stack-playground" class="ng-scope">
+        <ul class="stack ng-isolate-scope" swing-stack="">
+            <!-- ngRepeat: card in cards --><li swing-card="" swing-on-throwout="throwout(eventName, eventObject)" swing-on-throwoutleft="throwoutleft(eventName, eventObject)" swing-on-throwoutright="throwoutright(eventName, eventObject)" ng-repeat="card in cards" ng-class="card.name" class="ng-scope ng-isolate-scope clubs" style="touch-action: pan-x pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div class="contact"> 
+                    <div class="avatar" style="background-image:url(http://assets.vg247.com/current//2015/02/kanye-west.jpg)">
+                    </div>
+                    <div class="controls">
+                        <div id="backButton"><img src="./localhost_files/back.jpg"></div>
+                        <div id="cancelButton"><img src="./localhost_files/cancel2x.jpg"></div>
+                        <div id="likeButton" onclick="throwout(eventName, eventObject)"><img src="./localhost_files/heart2x.jpg"></div>
+                        <div id="locationButton"><img src="./localhost_files/location.jpg"></div>
+                    </div>
+                </div>
+
+            </li><!-- end ngRepeat: card in cards --><li swing-card="" swing-on-throwout="throwout(eventName, eventObject)" swing-on-throwoutleft="throwoutleft(eventName, eventObject)" swing-on-throwoutright="throwoutright(eventName, eventObject)" ng-repeat="card in cards" ng-class="card.name" class="ng-scope ng-isolate-scope diamonds" style="touch-action: pan-x pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div class="contact"> 
+                    <div class="avatar" style="background-image:url(http://assets.rollingstone.com/assets/2013/article/how-kanye-west-came-to-harvard-20131119/13521/_original/1035x672-111913-kanye-west-1800-1384897712.jpg)">
+                    </div>
+                    <div class="controls">
+                        <div id="backButton"><img src="./localhost_files/back.jpg"></div>
+                        <div id="cancelButton"><img src="./localhost_files/cancel2x.jpg"></div>
+                        <div id="likeButton" onclick="throwout(eventName, eventObject)"><img src="./localhost_files/heart2x.jpg"></div>
+                        <div id="locationButton"><img src="./localhost_files/location.jpg"></div>
+                    </div>
+                </div>
+
+            </li><!-- end ngRepeat: card in cards --><li swing-card="" swing-on-throwout="throwout(eventName, eventObject)" swing-on-throwoutleft="throwoutleft(eventName, eventObject)" swing-on-throwoutright="throwoutright(eventName, eventObject)" ng-repeat="card in cards" ng-class="card.name" class="ng-scope ng-isolate-scope hearts" style="touch-action: pan-x pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div class="contact"> 
+                    <div class="avatar" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtMWsK6DBprHLVk899jRzIxtqa3qRLR9AiQti9c3WHqRFsZqb5)">
+                    </div>
+                    <div class="controls">
+                        <div id="backButton"><img src="./localhost_files/back.jpg"></div>
+                        <div id="cancelButton"><img src="./localhost_files/cancel2x.jpg"></div>
+                        <div id="likeButton" onclick="throwout(eventName, eventObject)"><img src="./localhost_files/heart2x.jpg"></div>
+                        <div id="locationButton"><img src="./localhost_files/location.jpg"></div>
+                    </div>
+                </div>
+
+            </li><!-- end ngRepeat: card in cards --><li swing-card="" swing-on-throwout="throwout(eventName, eventObject)" swing-on-throwoutleft="throwoutleft(eventName, eventObject)" swing-on-throwoutright="throwoutright(eventName, eventObject)" ng-repeat="card in cards" ng-class="card.name" class="ng-scope ng-isolate-scope spades" style="touch-action: pan-x pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div class="contact"> 
+                    <div class="avatar" style="background-image:url(http://cdn.urbanislandz.com/wp-content/uploads/2013/05/Kanye-West.jpeg)">
+                    </div>
+                    <div class="controls">
+                        <div id="backButton"><img src="./localhost_files/back.jpg"></div>
+                        <div id="cancelButton"><img src="./localhost_files/cancel2x.jpg"></div>
+                        <div id="likeButton" onclick="throwout(eventName, eventObject)"><img src="./localhost_files/heart2x.jpg"></div>
+                        <div id="locationButton"><img src="./localhost_files/location.jpg"></div>
+                    </div>
+                </div>
+
+            </li><!-- end ngRepeat: card in cards -->
+
+        </ul>
+
+    </div>
+
+
+</body></html>
